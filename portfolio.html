@@ -319,53 +319,18 @@
         </div>
 
         <!-- подписка -->
-        <form class="js-speaker-form">
+        <form>
             <h3 class="subscribe-footer-header">Подпишитесь на рассылку</h3>
             <div class="footer-input-box">
               <input class="footer-input" type="email" name="email" placeholder="E-mail">
               <button class="subscribe-button" type="submit">Подписаться
                 <svg class="subscribe-icon" width="24" height="24">
-                  <use href="images/icons.svg#icon-send"></use>
+                  <use href="./images/icons.svg#icon-send"></use>
                 </svg>
               </button>
             </div>
           </form>
-
       </div>
     </footer>
-
-    <!-- start модальное окно  -->
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button type="button" class="modal-button" data-modal-close>
-          <svg class="modal-icon" width="30" height="30">
-            <use href="./images/icons.svg#icon-close">
-          </svg>
-        </button>
-      </div>
-    </div>
-    <!-- end модальное окно  -->
-    
-    <!-- start script -->
-    <script src="./js/modal.js"></script>
-    <!-- end script -->
-
-    <!-- start form script -->
-    <script>
-      (() => {
-        document
-          .querySelector('.js-speaker-form')
-          .addEventListener('submit', e => {
-            e.preventDefault();
-
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`),
-            );
-
-            e.currentTarget.reset();
-          });
-      })();
-    </script>
-    <!-- end form script -->
   </body>
 </html>
