@@ -526,7 +526,7 @@
             <use href="./images/icons.svg#icon-close">
           </svg>
         </button>
-        <form class="modal-form js-speaker-form">
+        <form class="modal-form">
           <h2 class="modal-header">Оставьте свои данные, мы вам перезвоним</h2>
 
           <label class="modal-input-box">
@@ -559,7 +559,7 @@
             </div>
           </label>
 
-          <label class="modal-input-box">
+          <label class="modal-input-box comment">
             <span class="modal-input-label">Комментарий</span>
             <textarea class="modal-input-textarea" placeholder="Введите текст" name="comment"></textarea>
           </label>
@@ -567,10 +567,12 @@
            <label class="modal-input-checkbox-label">
             <input class="checkbox visually-hidden" type="checkbox" name="checkbox">
             <span class="checkbox-icon"></span>
-            Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
+            <span>Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></span>
           </label>
 
-          <button class="modal-submit-button" type="submit">Отправить</button>
+          <div class="modal-submit-button-box">
+            <button class="modal-submit-button" type="submit">Отправить</button>
+          </div>
         </form>
       </div>
     </div>
@@ -580,22 +582,5 @@
     <script src="./js/modal.js"></script>
     <!-- end script -->
 
-    <!-- start form script -->
-    <script>
-      (() => {
-        document
-          .querySelector('.js-speaker-form')
-          .addEventListener('submit', e => {
-            e.preventDefault();
-
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`),
-            );
-
-            e.currentTarget.reset();
-          });
-      })();
-    </script>
-    <!-- end form script -->
   </body>
 </html>
